@@ -10,7 +10,7 @@ window.TRIP_DATA = {
     {
       date: "2026-09-18", dayNo: 0, label: "出发 · 上海汇合", city: "辽宁 / 沈阳 / 上海 / 东京",
       items: [
-        { time:"12:36–13:56", startISO:"2026-09-18T12:36:00+08:00", endISO:"2026-09-18T13:56:00+08:00", title:"辽宁朝阳 → 沈阳北站", transport:"高铁", scope:"parents", person:"爸妈", location:"辽宁朝阳站", mapQuery:"辽宁朝阳站" },
+        { time:"12:36–13:56", startISO:"2026-09-18T12:36:00+08:00", endISO:"2026-09-18T13:56:00+08:00", title:"辽宁朝阳 → 沈阳北站", transport:"高铁", scope:"parents", person:"爸妈", location:"辽宁朝阳站", mapQuery:"朝阳站 双塔区 朝阳市 辽宁省" },
         { time:"14:00 起", startISO:"2026-09-18T14:00:00+08:00", title:"上海大众空港宾馆可办理入住", transport:"徒步", scope:"all", person:"三人住宿", location:"上海大众空港宾馆", mapQuery:"上海大众空港宾馆", note:"爸妈先到上海后可先入住；我晚间抵达后会合。" },
         { time:"16:30–19:10", startISO:"2026-09-18T16:30:00+08:00", endISO:"2026-09-18T19:10:00+08:00", title:"沈阳桃仙机场 T3 → 上海浦东机场 T2", transport:"飞机", scope:"parents", person:"爸妈", location:"沈阳桃仙国际机场 T3", mapQuery:"沈阳桃仙国际机场 T3" },
         { time:"20:00–22:30", startISO:"2026-09-18T20:00:00+09:00", endISO:"2026-09-18T22:30:00+08:00", title:"东京成田机场 T3 → 上海浦东机场 T2", transport:"飞机", scope:"self", person:"我", location:"成田国际机场 第3航站楼", mapQuery:"Narita Airport Terminal 3" },
