@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f0e5" />
+  <meta name="description" content="2026 马来西亚·槟城·新加坡 亲子旅行行程" />
+  <title>2026 马来西亚 · 槟城 · 新加坡｜亲子旅行</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero paper-card">
+    <div class="hero-topline">
+      <div>
+        <p class="eyebrow">FAMILY TRIP · 2026.09</p>
+        <h1>马来西亚 · 槟城 · 新加坡</h1>
+        <p class="hero-subtitle">和爸妈一起的 9 天旅行手账</p>
+      </div>
+      <button id="themeToggle" class="icon-button" type="button" aria-label="切换日夜模式">🌙</button>
+    </div>
+
+    <section id="nextCard" class="next-card" aria-live="polite">
+      <div class="next-card__label">NEXT · 下一项</div>
+      <div id="nextTitle" class="next-card__title">正在读取行程…</div>
+      <div id="nextMeta" class="next-card__meta"></div>
+      <div id="countdown" class="countdown">--天 --:--:--</div>
+      <div id="nextActions" class="next-card__actions"></div>
+    </section>
+  </header>
+
+  <main>
+    <nav class="quick-nav paper-card" aria-label="页面导航">
+      <a href="#route">🗺️ 路线</a>
+      <a href="#today">📍 今日</a>
+      <a href="#all-days">🗓️ 全部</a>
+      <a href="#checklist">✅ 待办</a>
+    </nav>
+
+    <section id="route" class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">ROUTE OVERVIEW</p>
+        <h2>整趟路线</h2>
+        <p>上海汇合后一起出发，9/26 起分成「爸妈返程」和「我返程」两条路线。</p>
+      </div>
+      <div class="route-board paper-card" aria-label="旅行路线手绘图">
+        <svg class="route-svg" viewBox="0 0 1000 520" role="img" aria-label="上海、吉隆坡、槟城、新加坡及返程分支路线">
+          <defs>
+            <filter id="wobble" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="1" seed="2" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+            </filter>
+          </defs>
+          <path class="route-line" d="M110,120 C235,80 280,210 390,190 S535,130 600,235 S735,300 785,245" />
+          <path class="route-line branch parents" d="M785,245 C855,175 900,125 930,90" />
+          <path class="route-line branch self" d="M785,245 C835,330 820,420 900,430" />
+          <g class="route-stop" transform="translate(95,120)"><circle r="16"/><text y="-28">上海</text><text class="small" y="38">9/18 汇合</text></g>
+          <g class="route-stop" transform="translate(390,190)"><circle r="16"/><text y="-28">吉隆坡</text><text class="small" y="38">9/19–9/21</text></g>
+          <g class="route-stop" transform="translate(600,235)"><circle r="16"/><text y="-28">槟城</text><text class="small" y="38">9/21–9/23</text></g>
+          <g class="route-stop" transform="translate(785,245)"><circle r="16"/><text y="-28">新加坡</text><text class="small" y="38">9/23–9/26</text></g>
+          <g class="route-stop parent-stop" transform="translate(930,90)"><circle r="14"/><text x="-8" y="-26">爸妈：北京 → 辽宁朝阳</text><text class="small" x="-8" y="34">9/26</text></g>
+          <g class="route-stop self-stop" transform="translate(900,430)"><circle r="14"/><text x="-8" y="-26">我：吉隆坡 → 新加坡 → 东京</text><text class="small" x="-8" y="34">9/26–9/28</text></g>
+          <text class="scribble-note" x="490" y="75">一起走 ✈︎ 🚆 ✈︎</text>
+        </svg>
+        <div class="route-legend">
+          <span>👨‍👩‍👧 三人同行</span><span>👨‍👩 爸妈路线</span><span>👤 我的路线</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="today" class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">TODAY</p>
+        <h2>今日行程</h2>
+        <p id="todayLabel">根据马来西亚 / 新加坡当地时间自动显示。</p>
+      </div>
+      <div id="todayContent" class="day-stack"></div>
+    </section>
+
+    <section id="all-days" class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">FULL ITINERARY</p>
+        <h2>全部行程</h2>
+        <p>按日期展开查看；地点按钮可直接打开 Google Maps。</p>
+      </div>
+      <div id="allDaysContent" class="day-stack"></div>
+    </section>
+
+    <section id="checklist" class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">CHECKLIST</p>
+        <h2>出发前待办</h2>
+        <p>勾选状态只保存在当前设备浏览器里，刷新也不会消失。</p>
+      </div>
+      <div id="checklistContent" class="checklist-grid"></div>
+      <button id="resetChecklist" class="text-button" type="button">重置本机勾选状态</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>最后更新：<span id="lastUpdated"></span> · 行程如有变化，以本网页最新版本为准。</p>
+  </footer>
+
+  <script src="itinerary-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
